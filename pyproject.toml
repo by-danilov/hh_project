@@ -1,16 +1,19 @@
-[project]
+[tool.poetry]
 name = "hh-project"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "Nikita Danilov",email = "danilovn1@mail.ru"}
-]
+description = "Курсовая работа для сбора вакансий с hh.ru"
+authors = ["Никита Данилов danilovn1@mail.com"]
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-]
+packages = [{include = "src"}]
 
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+coverage = "^7.10.2"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
